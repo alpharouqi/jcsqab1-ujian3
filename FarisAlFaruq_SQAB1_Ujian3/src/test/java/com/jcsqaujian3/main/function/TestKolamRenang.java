@@ -32,11 +32,6 @@ public class TestKolamRenang {
 	}
 	
 	@Test
-	public void testBukanAngka() {
-		assertEquals("abc", function.kelilingVolume("abc"));
-	}
-	
-	@Test
 	@FileParameters("src/test/resources/kelilingkolam.csv")
 	public void testAngkaNegatif(double panjang, double lebar, double tinggi, double hasil) {
 		assertEquals(-80, function.kelilingKolam(-10, -5, -5), 0.0);
@@ -56,11 +51,6 @@ public class TestKolamRenang {
 	}
 	
 	@Test
-	public void testBukanAngka2() {
-		assertEquals("abc", function.kelilingVolume("abc"));
-	}
-	
-	@Test
 	@FileParameters("src/test/resources/volumekolam.csv")
 	public void testAngkaNegatif2(double panjang, double lebar, double tinggi, double hasil) {
 		assertEquals(-250, function.volumeKolam(-10, -5, -5), 0.000000001);
@@ -70,6 +60,16 @@ public class TestKolamRenang {
 	@FileParameters("src/test/resources/volumekolam.csv")
 	public void testTidakAdaAngka2(double panjang, double lebar, double tinggi, double hasil) {
 		assertEquals(0, function.volumeKolam(0,0,0), 0.000000001);
+	}
+	
+	@Test
+	public void testBukanAngka(double panjang, double lebar, double tinggi, double hasil) {
+		assertEquals("abc", function.kelilingVolume("abc"));
+	}
+	
+	@Test
+	public void testBukanAngka2(double panjang, double lebar, double tinggi, double hasil) {
+		assertEquals("abc", function.kelilingVolume("abc"));
 	}
 
 }

@@ -2,6 +2,7 @@ package com.jcsqaujian3.main.function;
 
 import static org.junit.Assert.*;
 
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -28,19 +29,19 @@ public class TestPerubahanSuhu {
 //	@FileParameters("src/test/resources/suhu.csv")
 //	public void testSuhuFahrenheit(double fahrenheit, double hasil) {
 //		System.out.println(hasil);
-//		assertEquals(hasil, function.suhuCelcius(fahrenheit), 0.0);
-//	}
-//	
-//	@Test
-//	public void testBukanAngka(String abc) {
-//		assertEquals("abc", function.suhuCelcius2("abc"));
+//		assertEquals(hasil, function.suhuCelcius(fahrenheit), -0.0);
 //	}
 //	
 //	@Test
 //	@FileParameters("src/test/resources/suhu.csv")
 //	public void testAngkaNegatif(double fahrenheit, double hasil) {
-//		assertEquals(hasil, function.suhuCelcius(fahrenheit), 0.0);
+//		assertEquals(hasil, function.suhuCelcius(fahrenheit), -0.0);
 //	}
+	
+	@Test
+	public void testBukanAngka(double fahrenheit, double hasil) {
+		assertEquals("abc", function.suhuCelcius2("abc"));
+	}
 	
 	@Test
 	@FileParameters("src/test/resources/suhu.csv")
